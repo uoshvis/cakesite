@@ -5,4 +5,6 @@ from .models import Member
 class MemberSerializer(serializers.ModelSerializer):
     class Meta:
         model = Member
-        fields = ('username', )
+        fields = ('id', 'username', 'email',
+                  'firstname', 'lastname', 'role')
+        fields = fields + ('date_created', 'date_modified')
